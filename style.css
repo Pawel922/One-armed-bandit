@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrap {
+    width: 80%;
+    margin: 5vh auto 0;
+    font-family: 'open sans', roboto, sans-serif;
+}
+
+
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.game {
+    display: block;
+    margin-bottom: 3vh;
+
+}
+
+.game div {
+    flex-grow: 1;
+    margin: 10px;
+}
+
+.play {
+    text-align: center;
+}
+
+.play input {
+    height: 60px;
+    font-size: 40px;
+    padding: 20px;
+    width: 400px;
+    border: 3px solid black;
+    text-align: center;
+}
+
+.play button {
+    width: 40%;
+    height: 60px;
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    background-color: #333;
+    border: none;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 6px;
+}
+
+
+.panel table {
+    width: 80%;
+    margin: 15px auto;
+    font-size: 25px;
+    font-family: 'open sans', roboto, sans-serif;
+    border-collapse: collapse;
+}
+
+.panel th,
+td {
+    border: 3px solid black;
+    text-align: center;
+}
+
+.panel th {
+    background-color: #333;
+    color: white;
+    height: 50px;
+}
+
+.machine {
+    width: 1000px;
+    height: 420px;
+    position: relative;
+    left: 50vw;
+    transform: translate(-600px, 0);
+    z-index: 1;
+}
+
+.gate1 {
+    width: 250px;
+    height: 300px;
+    left: 500px;
+    top: 60px;
+    transform: translate(-450px, 0);
+    position: absolute;
+    z-index: 2;
+}
+
+.gate2 {
+    width: 250px;
+    height: 300px;
+    left: 500px;
+    top: 60px;
+    transform: translate(-200px, 0);
+    position: absolute;
+    z-index: 2;
+}
+
+.gate3 {
+    width: 250px;
+    height: 300px;
+    left: 500px;
+    top: 60px;
+    transform: translate(50px, 0);
+    position: absolute;
+    z-index: 2;
+}
+
+@media (max-width: 1024px) {
+    .wrap {
+        width: 90%;
+    }
+
+    .play input {
+        height: 70px;
+        font-size: 30px;
+        display: block;
+        margin: 20px auto;
+
+    }
+
+    .play button {
+        height: 74px;
+        font-size: 30px;
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+}
