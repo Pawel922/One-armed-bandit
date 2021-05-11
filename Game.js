@@ -2,7 +2,7 @@ class Game {
     constructor(start) {
         this.stats = new Statistics();
         this.wallet = new Wallet(start);
-        document.getElementById('start').addEventListener('click', this.startGame);
+        document.getElementById('start').addEventListener('click', this.startGame.bind(this));
         this.spanWallet = document.querySelector('.panel span.wallet');
         this.boards = document.querySelectorAll('.machine img');
         this.inputBid = document.getElementById('bid');
@@ -22,7 +22,7 @@ class Game {
     }, {
         shape: 'rect',
         color: 'yellow'
-    }], money = this.wallet.getWalletMoney(), stats = [0, 0, 0]) {
+    }], money = this.wallet.getWalletMoney(), stats = [0, 0, 0], result = "", bid = 0, wonMoney = 0) {
         this.boards.forEach((gate, index) => {
             const path = `${gate.src.split('/img')[0]}/img/${gates[index].shape}_${gates[index].color}.png`;
             gate.src = path;
@@ -31,7 +31,33 @@ class Game {
         this.spanGames.textContent = stats[0];
         this.spanWins.textContent = stats[1];
         this.spanLosses.textContent = stats[2];
+        if (result) {
+            alert(`You win ${wonMoney}$ Congratulations!`);
+        } else if (!result && result !== "") {
+            alert(`You loss ${bid} $`);
+        }
+        this.inputBid.value = "";
     }
 
-    startGame() {}
+    startGame() {
+        if (this.inputBid.value < 1) return alert("Invalid value");
+
+        const bid = Math.floor(this.inputBid.value);
+
+        if (!this.wallet.checkCanPlay(bid)) {
+            return alert("You do not have enough money or invalid value")
+        }
+
+        this.wallet.changeWallet(bid, '-');
+
+        this.draw = new Draw();
+
+        const figures = this.draw.getDrawResult();
+        const win = Result.checkWinner(figures);
+        const wonMoney = Result.moneyWinInGame(win, bid);
+        this.wallet.changeWallet(wonMoney);
+        this.stats.addGameToStatistics(win, bid);
+
+        this.render(figures, this.wallet.getWalletMoney(), this.stats.showGameStatistics(), win, bid, wonMoney);
+    }
 }

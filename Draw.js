@@ -20,7 +20,6 @@ class Draw {
                 shape: this.shapes[indexShapes],
                 color: this.colors[indexColors]
             })
-            console.log(tempArray);
         }
         return tempArray;
     }
