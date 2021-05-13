@@ -6,6 +6,7 @@ class Game {
         this.spanWallet = document.querySelector('.panel span.wallet');
         this.boards = document.querySelectorAll('.machine img');
         this.inputBid = document.getElementById('bid');
+        this.spanResult = document.querySelector('.result span');
         this.spanGames = document.querySelector('.panel span.number');
         this.spanWins = document.querySelector('.panel span.win');
         this.spanLosses = document.querySelector('.panel span.loss');
@@ -32,14 +33,16 @@ class Game {
         this.spanWins.textContent = stats[1];
         this.spanLosses.textContent = stats[2];
         if (result) {
-            alert(`You win ${wonMoney}$ Congratulations!`);
+            this.spanResult.textContent = `You win ${wonMoney}$ Congratulations!`;
         } else if (!result && result !== "") {
-            alert(`You loss ${bid} $`);
+            this.spanResult.textContent = `You loss ${bid}$`;
         }
         this.inputBid.value = "";
     }
 
     startGame() {
+        this.spanResult.textContent = "";
+
         if (this.inputBid.value < 1) return alert("Invalid value");
 
         const bid = Math.floor(this.inputBid.value);
