@@ -3,6 +3,7 @@ class Game {
         this.stats = new Statistics();
         this.wallet = new Wallet(start);
         document.getElementById('start').addEventListener('click', this.startGame.bind(this));
+        this.intervalId;
         this.spanWallet = document.querySelector('.panel span.wallet');
         this.boards = document.querySelectorAll('.machine img');
         this.inputBid = document.getElementById('bid');
@@ -34,7 +35,12 @@ class Game {
         this.spanLosses.textContent = stats[2];
         if (result) {
             this.spanResult.textContent = `You win ${wonMoney}$ Congratulations!`;
+            this.intervalId = setInterval(() => {
+                this.spanResult.classList.toggle('hidden');
+            }, 500)
         } else if (!result && result !== "") {
+            clearInterval(this.intervalId);
+            this.spanResult.classList.remove('hidden');
             this.spanResult.textContent = `You loss ${bid}$`;
         }
         this.inputBid.value = "";
@@ -42,6 +48,8 @@ class Game {
 
     startGame() {
         this.spanResult.textContent = "";
+        clearInterval(this.intervalId);
+        this.spanResult.classList.remove('hidden');
 
         if (this.inputBid.value < 1) return alert("Invalid value");
 

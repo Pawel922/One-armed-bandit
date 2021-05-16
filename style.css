@@ -20,8 +20,6 @@ h1 {
 
 .game {
     display: block;
-    margin-bottom: 3vh;
-
 }
 
 .game div {
@@ -117,10 +115,15 @@ td {
 
 
 .result {
-    margin: 5px auto 15px;
+    height: 30px;
+    margin: 10px auto 10px;
     text-align: center;
     font-size: 30px;
     font-weight: bold;
+}
+
+.hidden {
+    visibility: hidden;
 }
 
 @media (max-width: 1024px) {
