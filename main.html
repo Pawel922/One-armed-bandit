@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One-armed bandit</title>
+    <script src="https://kit.fontawesome.com/8fbd4d506b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style_main.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <h1>One-armed bandit</h1>
+        </header>
+        <section class="summary">
+            <ul>
+                <li>Your money<i class="far fa-money-bill-alt"></i><span class="wallet"></span></li>
+                <li>Number of games<i class="fas fa-dice"></i><span class="number"></span></li>
+                <li>Wins<i class="fas fa-trophy"></i><span class="win"></span></li>
+                <li>Losses<i class="far fa-frown-open"></i><span class="loss"></span></li>
+                <li>Help<i class="fas fa-question"></i></li>
+            </ul>
+        </section>
+        <section class="game">
+            <div class="frame">
+                <div class="gate1">
+                    <p><i class="fas fa-candy-cane"></i></p>
+                </div>
+            </div>
+            <div class="gate2">
+                <p><i class="fas fa-cat"></i></p>
+            </div>
+            <div class="gate3">
+                <p><i class="fas fa-coffee"></i></p>
+            </div>
+        </section>
+        <section class="panel">
+            <input type="number" placeholder="Your bet" id="bid">
+            <button id="start">Play!</button>
+        </section>
+        <footer>
+            <p>Autor: Paweł Woźniak</p>
+        </footer>
+    </div>
+</body>
+
+</html>
