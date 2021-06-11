@@ -1,3 +1,7 @@
+/* https://pixabay.com/pl/photos/kasyno-karty-oczko-%C5%BCetony-hazard-1030852/ */
+/* font-family: 'Noto Sans TC', sans-serif; */
+
+
 * {
     margin: 0;
     padding: 0;
@@ -8,4 +12,68 @@
     content: "";
     display: block;
     clear: both;
+}
+
+.wrap {
+    max-width: 1440px;
+    height: 100vh;
+    margin: 0 auto;
+    font-family: 'Noto Sans TC', sans-serif;
+    color: rgb(211, 222, 6);
+    background-image: url("img/casino_1280x850.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header h1 {
+    height: 20vh;
+    font-size: 52px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    line-height: 20vh;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgba(63, 140, 118, 0.5);
+}
+
+.summary ul {
+    width: 30%;
+    height: 60vh;
+    background-color: rgba(63, 140, 118, 0.5);
+}
+
+.summary ul li {
+    position: relative;
+    display: block;
+    height: 20%;
+    list-style: none;
+    font-size: 24px;
+    font-weight: 400;
+
+}
+
+.summary ul li i {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(0, -50%);
+    display: inline-block;
+    text-align: center;
+    font-size: 30px;
+}
+
+.summary .description {
+    position: absolute;
+    top: 50%;
+    left: 70px;
+    transform: translate(0, -50%);
+    display: inline-block;
+    width: 60%;
+    padding-left: 5px;
+}
+
+footer {
+    height: 20vh;
+    background-color: rgba(63, 140, 118, 0.5);
 }
