@@ -19,14 +19,14 @@
         </header>
         <section class="summary">
             <ul>
-                <li><i class="far fa-money-bill-alt"></i><span class="description">Your money<span><span
-                                class="wallet"></span></li>
-                <li><i class="fas fa-dice"></i><span class="description">Number of games<span><span
-                                class="number"></span></li>
-                <li><i class="fas fa-trophy"></i><span class="description">Wins<span><span class="win"></span></li>
-                <li><i class="far fa-frown-open"></i><span class="description">Losses<span><span class="loss"></span>
+                <li><i class="far fa-money-bill-alt"></i><span class="description">Your money</span><span
+                        class="wallet">0$</span></li>
+                <li><i class="fas fa-dice"></i><span class="description">Number of games</span><span
+                        class="number">0</span></li>
+                <li><i class="fas fa-trophy"></i><span class="description">Wins</span><span class="win">0</span></li>
+                <li><i class="far fa-frown-open"></i><span class="description">Losses</span><span class="loss">0</span>
                 </li>
-                <li><i class="fas fa-question"></i><span class="description">Help<span></span></li>
+                <li><i class="fas fa-question"></i><span class="description">Help</span></li>
             </ul>
         </section>
         <section class="game">
@@ -34,20 +34,22 @@
                 <div class="gate1">
                     <p><i class="fas fa-candy-cane"></i></p>
                 </div>
+                <div class="gate2">
+                    <p><i class="fas fa-cat"></i></p>
+                </div>
+                <div class="gate3">
+                    <p><i class="fas fa-coffee"></i></p>
+                </div>
+                <div class="clear"></div>
             </div>
-            <div class="gate2">
-                <p><i class="fas fa-cat"></i></p>
-            </div>
-            <div class="gate3">
-                <p><i class="fas fa-coffee"></i></p>
+            <div class="panel">
+                <input type="number" placeholder="Your bet" id="bid">
+                <button id="start">Play!</button>
             </div>
         </section>
-        <section class="panel">
-            <input type="number" placeholder="Your bet" id="bid">
-            <button id="start">Play!</button>
-        </section>
+        <section class="clear"></section>
         <footer>
-            <p>Autor: Paweł Woźniak</p>
+            <p>&copy Paweł Woźniak</p>
         </footer>
     </div>
 </body>

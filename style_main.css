@@ -8,8 +8,7 @@
     box-sizing: border-box;
 }
 
-.clearix {
-    content: "";
+.clear {
     display: block;
     clear: both;
 }
@@ -35,11 +34,19 @@ header h1 {
     text-align: center;
     text-transform: uppercase;
     background-color: rgba(63, 140, 118, 0.5);
+    border-bottom: 2px solid rgb(211, 222, 6);
+}
+
+
+
+.summary {
+    float: left;
+    width: 30%;
+    border-right: 2px solid rgb(211, 222, 6);
 }
 
 .summary ul {
-    width: 30%;
-    height: 60vh;
+    height: 70vh;
     background-color: rgba(63, 140, 118, 0.5);
 }
 
@@ -73,7 +80,41 @@ header h1 {
     padding-left: 5px;
 }
 
+.wallet,
+.number,
+.win,
+.loss {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translate(0, -50%);
+    display: inline-block;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+
+.game {
+    width: 70%;
+    height: 70vh;
+    float: left;
+}
+
+.frame {
+    height: 80%;
+}
+
+.gate1,
+.gate2,
+.gate3 {
+    float: left;
+}
+
+
 footer {
-    height: 20vh;
+    height: 10vh;
+    line-height: 10vh;
+    text-align: center;
     background-color: rgba(63, 140, 118, 0.5);
+    border-top: 2px solid rgb(211, 222, 6)
 }
