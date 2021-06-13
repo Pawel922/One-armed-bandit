@@ -151,7 +151,45 @@ header h1 {
     color: rgb(178, 8, 45);
 }
 
+.panel {
+    text-align: center;
+}
 
+#bid {
+    display: inline-block;
+    width: 200px;
+    padding: 5px 5px 5px 5px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#start {
+    display: inline-block;
+    width: 200px;
+    padding: 5px 5px 5px 5px;
+    margin-left: 20px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+
+}
+
+#start:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
 
 
 footer {
