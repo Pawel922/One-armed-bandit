@@ -4,13 +4,13 @@ class Game {
         this.wallet = new Wallet(start);
         document.getElementById('start').addEventListener('click', this.startGame.bind(this));
         this.intervalId;
-        this.spanWallet = document.querySelector('.panel span.wallet');
-        this.boards = document.querySelectorAll('.machine img');
+        this.spanWallet = document.querySelector('.summary span.wallet');
+        this.boards = document.querySelectorAll('.frame i');
         this.inputBid = document.getElementById('bid');
-        this.spanResult = document.querySelector('.result span');
-        this.spanGames = document.querySelector('.panel span.number');
-        this.spanWins = document.querySelector('.panel span.win');
-        this.spanLosses = document.querySelector('.panel span.loss');
+        this.spanResult = document.querySelector('.result p');
+        this.spanGames = document.querySelector('.summary span.number');
+        this.spanWins = document.querySelector('.summary span.win');
+        this.spanLosses = document.querySelector('.summary span.loss');
 
         this.render();
     }
