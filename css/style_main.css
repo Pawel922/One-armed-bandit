@@ -102,7 +102,7 @@ header h1 {
 
 .frame {
     position: relative;
-    height: 80%;
+    height: 75%;
 }
 
 .gate1,
@@ -149,6 +149,13 @@ header h1 {
     transform: translate(-50%, -50%);
     font-size: 120px;
     color: rgb(178, 8, 45);
+}
+
+.result p {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 2px black;
 }
 
 .panel {
