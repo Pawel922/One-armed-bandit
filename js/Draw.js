@@ -2,9 +2,9 @@ class Draw {
     constructor() {
         this.numOfGates = 3;
         //table which contains all possible shapes
-        this.shapes = ['circle', 'rect', 'rhomb', 'triangle'];
+        this.shapes = ['fa-bell', 'fa-bomb', 'fa-candy-cane', 'fa-carrot', 'fa-cat'];
         //table which contains all possible colors
-        this.colors = ['green', 'yellow', 'blue'];
+        this.colors = ['color1', 'color2', 'color3'];
 
         //table which contains draw result
         let _result = this.drawResult();

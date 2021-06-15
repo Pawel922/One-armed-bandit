@@ -148,7 +148,6 @@ header h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 120px;
-    color: rgb(178, 8, 45);
 }
 
 .result p {
@@ -205,4 +204,20 @@ footer {
     text-align: center;
     background-color: rgba(63, 140, 118, 0.5);
     border-top: 2px solid rgb(211, 222, 6)
+}
+
+.color1 {
+    color: rgb(178, 8, 45);
+}
+
+.color2 {
+    color: rgb(211, 222, 6)
+}
+
+.color3 {
+    color: rgba(28, 235, 176, 0.5)
+}
+
+.hidden {
+    visibility: hidden;
 }

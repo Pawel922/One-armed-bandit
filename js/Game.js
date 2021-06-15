@@ -16,18 +16,20 @@ class Game {
     }
 
     render(gates = [{
-        shape: 'rect',
-        color: 'blue'
+        shape: 'fa-candy-cane',
+        color: 'color1'
     }, {
-        shape: 'rect',
-        color: 'green'
+        shape: 'fa-cat',
+        color: 'color2'
     }, {
-        shape: 'rect',
-        color: 'yellow'
+        shape: 'fa-bomb',
+        color: 'color3'
     }], money = this.wallet.getWalletMoney(), stats = [0, 0, 0], result = "", bid = 0, wonMoney = 0) {
         this.boards.forEach((gate, index) => {
-            const path = `${gate.src.split('/img')[0]}/img/${gates[index].shape}_${gates[index].color}.png`;
-            gate.src = path;
+            gate.classList.remove(gate.classList[1]);
+            gate.classList.remove(gate.classList[1]);
+            gate.classList.add(gates[index].shape);
+            gate.classList.add(gates[index].color);
         })
         this.spanWallet.textContent = `${money}$`;
         this.spanGames.textContent = stats[0];
@@ -47,7 +49,7 @@ class Game {
     }
 
     startGame() {
-        this.spanResult.textContent = "";
+        this.spanResult.textContent = "Good luck!";
         clearInterval(this.intervalId);
         this.spanResult.classList.remove('hidden');
 
