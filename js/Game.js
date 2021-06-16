@@ -53,12 +53,12 @@ class Game {
         clearInterval(this.intervalId);
         this.spanResult.classList.remove('hidden');
 
-        if (this.inputBid.value < 1) return alert("Invalid value");
+        if (this.inputBid.value < 1) return location.href = "#warning1";
 
         const bid = Math.floor(this.inputBid.value);
 
         if (!this.wallet.checkCanPlay(bid)) {
-            return alert("You do not have enough money or invalid value")
+            return location.href = "#warning2";
         }
 
         this.wallet.changeWallet(bid, '-');
