@@ -57,7 +57,6 @@ header h1 {
     list-style: none;
     font-size: 24px;
     font-weight: 400;
-
 }
 
 .summary ul li i {
@@ -292,4 +291,46 @@ footer {
 .close:hover {
     background: black;
     color: white;
+}
+
+/*******************************************************************/
+
+@media(max-width: 1280px) {
+    .summary ul li {
+        font-size: 20px;
+    }
+
+    .summary ul li i {
+        font-size: 26px;
+    }
+
+    .wallet,
+    .number,
+    .win,
+    .loss {
+        font-size: 28px;
+        right: 8%;
+    }
+}
+
+@media(max-width: 1024px) {
+    .summary ul li {
+        font-size: 16px;
+    }
+
+    .summary ul li i {
+        font-size: 20px;
+    }
+
+    .wallet,
+    .number,
+    .win,
+    .loss {
+        font-size: 22px;
+        right: 5%;
+    }
+
+    .frame p i {
+        font-size: 100px;
+    }
 }
