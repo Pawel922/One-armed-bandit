@@ -406,6 +406,11 @@ footer {
         font-size: 80px;
     }
 
+    .result p {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
     #bid {
         width: 150px;
         font-size: 24px;
@@ -414,5 +419,84 @@ footer {
     #start {
         width: 150px;
         font-size: 24px;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 1024px) {
+    .result p {
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+
+    #bid {
+        font-size: 28px;
+    }
+
+    #start {
+        font-size: 28px;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 736px) {
+    header h1 {
+        height: 10vh;
+        line-height: 10vh;
+        font-size: 25px;
+    }
+
+    .summary ul {
+        height: 30vh;
+        background-color: rgba(63, 140, 118, 0.5);
+    }
+
+
+    .summary ul li {
+        font-size: 17px;
+    }
+
+    .summary ul li i {
+        font-size: 14px;
+    }
+
+    .wallet,
+    .number,
+    .win,
+    .loss {
+        font-size: 20px;
+    }
+
+    .result {
+        width: 50%;
+        float: left;
+    }
+
+    .result p {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .panel {
+        width: 50%;
+        float: left;
+    }
+
+    .frame p i {
+        font-size: 70px;
+    }
+
+    #bid {
+        width: 140px;
+        font-size: 20px;
+    }
+
+    #start {
+        width: 140px;
+        font-size: 20px;
+    }
+
+    footer {
+        height: 5vh;
+        line-height: 5vh;
+        font-size: 10px;
     }
 }
